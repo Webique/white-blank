@@ -14,32 +14,47 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ language }) => {
         {
           title: "Lake View",
           category: "Branding & Content",
-          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/90dcb97f-d831-4457-8f40-f073cea3b3d6.png"
         },
         {
           title: "Dehleez Ceramics",
           category: "Visual Identity",
-          image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/9ccedeb7-a51d-406f-9c13-25024c770845.png"
         },
         {
           title: "Shokz",
           category: "Marketing Campaign",
-          image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/db7d6e9c-3fac-4434-9b35-a2fbb95a9d5e.png"
         },
         {
           title: "MOG",
           category: "Social Media",
-          image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/81a3f9c9-3542-469a-abc5-a3f403200229.png"
         },
         {
           title: "UBC (Urban Build Concepts)",
           category: "Digital Strategy",
-          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/ea04adbe-f6ad-4c95-bad5-1bcacc078a08.png"
         },
         {
           title: "Sava Hotel",
           category: "Complete Branding",
-          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/bb938bc9-a614-4958-b82f-40b05bb3b0e0.png"
+        },
+        {
+          title: "FLIP",
+          category: "Creative Content",
+          image: "/lovable-uploads/1c0e7cda-fde9-4d5c-af76-1bbeb5a7e4b1.png"
+        },
+        {
+          title: "Shokz Social Media",
+          category: "Social Media Content",
+          image: "/lovable-uploads/ee1e4de3-b5da-421b-8443-0542b03b3d20.png"
+        },
+        {
+          title: "Be You Coffee Roasters",
+          category: "Product Design",
+          image: "/lovable-uploads/844e20ba-5e68-44ac-a9cd-5caed9b7de8a.png"
         }
       ]
     },
@@ -50,32 +65,47 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ language }) => {
         {
           title: "ليك فيو",
           category: "العلامة التجارية والمحتوى",
-          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/90dcb97f-d831-4457-8f40-f073cea3b3d6.png"
         },
         {
           title: "دهليز للسيراميك",
           category: "الهوية البصرية",
-          image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/9ccedeb7-a51d-406f-9c13-25024c770845.png"
         },
         {
           title: "شوكز",
           category: "الحملة التسويقية",
-          image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/db7d6e9c-3fac-4434-9b35-a2fbb95a9d5e.png"
         },
         {
           title: "موج",
           category: "وسائل التواصل الاجتماعي",
-          image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/81a3f9c9-3542-469a-abc5-a3f403200229.png"
         },
         {
           title: "يو بي سي (مفاهيم البناء الحضري)",
           category: "الاستراتيجية الرقمية",
-          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/ea04adbe-f6ad-4c95-bad5-1bcacc078a08.png"
         },
         {
           title: "فندق سافا",
           category: "العلامة التجارية الكاملة",
-          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop&crop=center"
+          image: "/lovable-uploads/bb938bc9-a614-4958-b82f-40b05bb3b0e0.png"
+        },
+        {
+          title: "فليب",
+          category: "المحتوى الإبداعي",
+          image: "/lovable-uploads/1c0e7cda-fde9-4d5c-af76-1bbeb5a7e4b1.png"
+        },
+        {
+          title: "شوكز - وسائل التواصل",
+          category: "محتوى وسائل التواصل الاجتماعي",
+          image: "/lovable-uploads/ee1e4de3-b5da-421b-8443-0542b03b3d20.png"
+        },
+        {
+          title: "محمصة بي يو للقهوة",
+          category: "تصميم المنتجات",
+          image: "/lovable-uploads/844e20ba-5e68-44ac-a9cd-5caed9b7de8a.png"
         }
       ]
     }
