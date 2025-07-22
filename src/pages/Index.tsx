@@ -1,12 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React, { useState, useEffect } from 'react';
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import WhyUsSection from '@/components/WhyUsSection';
+import ServicesSection from '@/components/ServicesSection';
+import PortfolioSection from '@/components/PortfolioSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  const [language, setLanguage] = useState<'en' | 'ar'>('en');
+
+  // Add smooth scrolling to the html element
+  useEffect(() => {
+    document.documentElement.classList.add('smooth-scroll');
+    
+    // Set direction based on language
+    document.dir = language === 'ar' ? 'rtl' : 'ltr';
+    
+    return () => {
+      document.documentElement.classList.remove('smooth-scroll');
+    };
+  }, [language]);
+
+  const handleLanguageChange = (lang: 'en' | 'ar') => {
+    setLanguage(lang);
+  };
+
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navigation language={language} onLanguageChange={handleLanguageChange} />
+      
+      <main>
+        <HeroSection language={language} onContactClick={scrollToContact} />
+        <AboutSection language={language} />
+        <WhyUsSection language={language} />
+        <ServicesSection language={language} />
+        <PortfolioSection language={language} />
+        <ContactSection language={language} />
+      </main>
+      
+      <Footer language={language} />
     </div>
   );
 };
