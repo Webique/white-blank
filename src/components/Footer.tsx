@@ -51,9 +51,9 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <img 
-              src="/lovable-uploads/9b247cbf-e2af-471b-a672-f1951d5780b3.png" 
+              src="/lovable-uploads/white-blank-logo.png" 
               alt="White Blank Marketing" 
-              className="h-10 mb-4 brightness-0 invert"
+              className="h-20 md:h-28 lg:h-32 mb-4 brightness-0 invert"
             />
             <p className={`font-body text-primary-foreground/80 text-sm leading-relaxed ${
               language === 'ar' ? 'text-right' : ''
@@ -92,15 +92,15 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
               {currentContent.contact}
             </h4>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
+            <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                 <Phone className="w-4 h-4 text-accent" />
                 <span className="font-body text-primary-foreground/80 text-sm">0533696905</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                 <Mail className="w-4 h-4 text-accent" />
                 <span className="font-body text-primary-foreground/80 text-sm">whiteblankmkt@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                 <MapPin className="w-4 h-4 text-accent" />
                 <span className="font-body text-primary-foreground/80 text-sm">
                   {language === 'en' ? "ABHA – ALHEZAM STREET" : "أبها – شارع الحزام"}
@@ -114,7 +114,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             <h4 className={`font-subheading text-lg mb-4 ${language === 'ar' ? 'text-right' : ''}`}>
               {currentContent.followUs}
             </h4>
-            <div className="flex space-x-4">
+            <div className={`flex ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
               <a 
                 href="#" 
                 className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300"

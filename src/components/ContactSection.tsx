@@ -112,16 +112,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
     <section id="contact" className="py-20 lg:py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className={`font-heading text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 animate-slide-up ${
-            language === 'ar' ? 'text-right' : ''
-          }`}>
-            {currentContent.title}
-          </h2>
-          <p className={`font-body text-lg text-muted-foreground animate-slide-up ${
-            language === 'ar' ? 'text-right' : ''
-          }`}>
-            {currentContent.subtitle}
-          </p>
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 animate-slide-up text-center">
+          {currentContent.title}
+        </h2>
+
+        <p className="font-body text-lg text-muted-foreground animate-slide-up text-center">
+          {currentContent.subtitle}
+        </p>
+
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -129,7 +127,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
           <div className={`space-y-8 ${language === 'ar' ? 'lg:order-2' : ''}`}>
             <div className="animate-slide-up">
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+              <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
+
                   <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
@@ -139,7 +138,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
+                <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
+
                   <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
@@ -149,7 +149,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
+                <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
+
                   <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
@@ -195,12 +196,20 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
 
               <div>
                 <Select onValueChange={(value) => handleInputChange('service', value)}>
-                  <SelectTrigger className="h-12 font-body">
+                  <SelectTrigger className="h-12 font-body bg-background border border-input rounded-md focus:ring-2 focus:ring-accent focus:border-accent transition-colors">
                     <SelectValue placeholder={currentContent.form.servicePlaceholder} />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent
+                    className="bg-background border border-input rounded-md shadow-lg z-50"
+                    side="bottom"
+                    align="start"
+                  >
                     {currentContent.services.map((service, index) => (
-                      <SelectItem key={index} value={service}>
+                      <SelectItem
+                        key={index}
+                        value={service}
+                        className="hover:bg-accent/10 focus:bg-accent/20 transition-colors cursor-pointer"
+                      >
                         {service}
                       </SelectItem>
                     ))}

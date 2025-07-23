@@ -117,11 +117,10 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ language }) => {
     <section id="portfolio" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className={`font-heading text-3xl sm:text-4xl lg:text-5xl text-foreground mb-8 animate-slide-up ${
-            language === 'ar' ? 'text-right' : ''
-          }`}>
-            {currentContent.title}
-          </h2>
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-foreground mb-8 animate-slide-up text-center">
+  {currentContent.title}
+</h2>
+
           <p className={`font-body text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-slide-up ${
             language === 'ar' ? 'text-right' : ''
           }`}>

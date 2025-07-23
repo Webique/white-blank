@@ -45,6 +45,30 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
     ]
   };
 
+  // Determine direction and spacing for nav links
+  const isRTL = language === 'ar';
+
+  // Helper for RTL spacing: add extra margin between portfolio/contact
+  const getNavButtonStyle = (idx: number, arrLen: number, isRTL: boolean) => {
+    if (!isRTL) {
+      // LTR: default spacing
+      return { marginRight: idx !== arrLen - 1 ? '2rem' : 0, marginLeft: 0 };
+    } else {
+      // RTL: uniform spacing for all except last
+      return { marginLeft: idx !== arrLen - 1 ? '2rem' : 0, marginRight: 0 };
+    }
+  };
+
+  // For mobile menu, similar logic but smaller margin
+  const getMobileNavButtonStyle = (idx: number, arrLen: number, isRTL: boolean) => {
+    if (!isRTL) {
+      return { marginRight: idx !== arrLen - 1 ? '0.5rem' : 0, marginLeft: 0 };
+    } else {
+      return { marginLeft: idx !== arrLen - 1 ? '0.5rem' : 0, marginRight: 0 };
+    }
+  };
+  
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -54,19 +78,40 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/9b247cbf-e2af-471b-a672-f1951d5780b3.png" 
+              src="/lovable-uploads/white-blank-logo.png" 
               alt="White Blank Marketing" 
-              className="h-8 lg:h-10 w-auto"
+              className="
+                h-20 
+                md:h-28 
+                lg:h-36 
+                xl:h-40 
+                2xl:h-48 
+                w-auto
+                transition-all
+                duration-300
+                max-h-[12vh]
+              "
+              style={{
+                maxWidth: '100%',
+                objectFit: 'contain'
+              }}
             />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navItems[language].map((item) => (
+          <div
+  className={`hidden lg:flex items-center ${
+    isRTL ? 'flex-row-reverse' : 'flex-row'
+  } gap-8`}
+  dir={isRTL ? 'rtl' : 'ltr'}
+>
+
+            {navItems[language].map((item, idx) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className="font-body text-foreground hover:text-accent transition-colors duration-300 relative group"
+                style={getNavButtonStyle(idx, navItems[language].length, isRTL)}
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -111,12 +156,16 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-background/95 backdrop-blur-md border-t border-border">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems[language].map((item) => (
+            <div
+              className={`px-2 pt-2 pb-3 space-y-1`}
+              dir={isRTL ? 'rtl' : 'ltr'}
+            >
+              {navItems[language].map((item, idx) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className="block w-full text-left px-3 py-2 font-body text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-colors duration-300"
+                  style={getMobileNavButtonStyle(idx, navItems[language].length, isRTL)}
                 >
                   {item.label}
                 </button>
