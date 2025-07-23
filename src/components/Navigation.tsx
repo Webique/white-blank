@@ -21,7 +21,13 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+    let element;
+    if (sectionId === 'contact') {
+      // Since contact section was removed, scroll to footer
+      element = document.querySelector('footer');
+    } else {
+      element = document.getElementById(sectionId);
+    }
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
