@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
 
 interface FooterProps {
   language: 'en' | 'ar';
@@ -116,22 +116,12 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             </h4>
             <div className={`flex ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
               <a 
-                href="#" 
+                href="https://instagram.com/whiteblank.mkt" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300"
-              >
-                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
