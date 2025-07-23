@@ -5,7 +5,7 @@ import AboutSection from '@/components/AboutSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
-import ContactSection from '@/components/ContactSection';
+
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -27,24 +27,18 @@ const Index = () => {
     setLanguage(lang);
   };
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation language={language} onLanguageChange={handleLanguageChange} />
       
       <main>
-        <HeroSection language={language} onContactClick={scrollToContact} />
+        <HeroSection language={language} onContactClick={() => {}} />
         <AboutSection language={language} />
         <WhyUsSection language={language} />
         <ServicesSection language={language} />
         <PortfolioSection language={language} />
-        <ContactSection language={language} />
+        
       </main>
       
       <Footer language={language} />

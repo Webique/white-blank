@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
             <Button 
               variant="accent" 
               size="lg"
-              onClick={onContactClick}
+              onClick={() => window.open(`https://wa.me/966533696905?text=${encodeURIComponent(language === 'en' ? 'Hi! I\'d like to collaborate with White Blank Marketing.' : 'مرحبا! أود التعاون مع وايت بلانك للتسويق.')}`)}
               className="group"
             >
               {currentContent.cta}
