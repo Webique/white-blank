@@ -9,7 +9,7 @@ import PortfolioSection from '@/components/PortfolioSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  const [language, setLanguage] = useState<'en' | 'ar'>('en');
+  const [language, setLanguage] = useState<'en' | 'ar'>('ar');
 
   // Add smooth scrolling to the html element
   useEffect(() => {
