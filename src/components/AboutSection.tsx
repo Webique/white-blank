@@ -25,16 +25,22 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
           {/* Text Content */}
           <div className={`space-y-8 ${language === 'ar' ? 'lg:order-2 text-right' : ''}`}>
             <div className="animate-slide-up">
-              <h2
-                className={`font-heading text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 ${
-                  language === 'ar' ? 'text-center' : ''
-                }`}
-              >
+            <h2
+              className={`font-heading text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 text-center lg:text-left ${
+                language === 'ar' ? 'text-center' : ''
+              }`}
+            >
+
                 {currentContent.title}
               </h2>
-              <p className="font-body text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                {currentContent.text}
-              </p>
+              <p
+  className={`font-body text-lg sm:text-xl text-muted-foreground leading-relaxed text-center lg:text-left ${
+    language === 'ar' ? 'text-center' : ''
+  }`}
+>
+  {currentContent.text}
+</p>
+
             </div>
           </div>
 

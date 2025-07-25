@@ -41,17 +41,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="animate-slide-up">
-          <h1 className={`font-heading text-4xl sm:text-6xl lg:text-8xl text-white mb-6 leading-tight ${
-            language === 'ar' ? 'text-right' : ''
-          }`}>
+        <h1 className={`font-heading text-4xl sm:text-6xl lg:text-8xl text-white mb-6 leading-tight text-center ${
+  language === 'ar' ? 'text-center' : ''
+}`}>
+
             <span className="text-gradient">
               {currentContent.headline}
             </span>
           </h1>
           
-          <p className={`font-body text-lg sm:text-xl lg:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed ${
-            language === 'ar' ? 'text-right' : ''
-          }`}>
+          <p className={`font-body text-lg sm:text-xl lg:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed text-center ${
+  language === 'ar' ? 'text-center' : ''
+}`}>
             {currentContent.subtext}
           </p>
 
