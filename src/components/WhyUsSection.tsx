@@ -47,35 +47,6 @@ const WhyUsSection: React.FC<WhyUsSectionProps> = ({ language }) => {
             </p>
           </div>
 
-          {/* Image Carousel */}
-          <div className="max-w-4xl mx-auto mb-16" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                direction: language === 'ar' ? 'rtl' : 'ltr',
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {Array.from({ length: 13 }, (_, i) => i + 1).map((imageNumber) => (
-                  <CarouselItem key={imageNumber} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-2">
-                      <div className="card-premium overflow-hidden">
-                        <img
-                          src={`/lovable-uploads/${imageNumber}.jpg`}
-                          alt={`Project ${imageNumber}`}
-                          className="w-full h-64 sm:h-72 lg:h-80 object-cover transition-transform duration-300 hover:scale-105"
-                        />
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
 
           {/* Animated Icons */}
           <div
