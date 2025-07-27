@@ -1,5 +1,12 @@
 import React from 'react';
 import { Sparkles, Star, Zap } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface WhyUsSectionProps {
   language: 'en' | 'ar';
@@ -40,12 +47,40 @@ const WhyUsSection: React.FC<WhyUsSectionProps> = ({ language }) => {
             </p>
           </div>
 
+          {/* Image Carousel */}
+          <div className="max-w-4xl mx-auto mb-16" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {Array.from({ length: 13 }, (_, i) => i + 1).map((imageNumber) => (
+                  <CarouselItem key={imageNumber} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2">
+                      <div className="card-premium overflow-hidden">
+                        <img
+                          src={`/lovable-uploads/${imageNumber}.jpg`}
+                          alt={`Project ${imageNumber}`}
+                          className="w-full h-64 sm:h-72 lg:h-80 object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
+          </div>
+
           {/* Animated Icons */}
           <div
-  className="flex justify-center items-center gap-8 lg:gap-16"
-  dir={language === 'ar' ? 'rtl' : 'ltr'}
->
-
+            className="flex justify-center items-center gap-8 lg:gap-16"
+            dir={language === 'ar' ? 'rtl' : 'ltr'}
+          >
             <div className="animate-float">
               <div className="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-accent rounded-full flex items-center justify-center shadow-premium">
                 <Star className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
