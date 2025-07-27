@@ -53,6 +53,7 @@ const WhyUsSection: React.FC<WhyUsSectionProps> = ({ language }) => {
               opts={{
                 align: "start",
                 loop: true,
+                direction: language === 'ar' ? 'rtl' : 'ltr',
               }}
               className="w-full"
             >
@@ -71,8 +72,8 @@ const WhyUsSection: React.FC<WhyUsSectionProps> = ({ language }) => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex" />
-              <CarouselNext className="hidden sm:flex" />
+              <CarouselPrevious />
+              <CarouselNext />
             </Carousel>
           </div>
 
