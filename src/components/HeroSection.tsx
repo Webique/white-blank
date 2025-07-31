@@ -30,7 +30,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
         {/* Clickable area positioned over the "Ready/مستعد" text */}
         <button
           onClick={handleWhatsAppClick}
-          className="absolute bottom-[20%] right-[8%] w-[25%] h-[20%] bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-xl cursor-pointer"
+          className={`absolute transition-colors duration-300 rounded-xl cursor-pointer hover:bg-white/10 ${
+            language === 'en' 
+              ? 'bottom-[20%] right-[8%] w-[25%] h-[20%]'  // English positioning
+              : 'bottom-[20%] left-[8%] w-[25%] h-[20%]'   // Arabic positioning (left side)
+          }`}
           aria-label={language === 'en' ? 'Contact us on WhatsApp' : 'تواصل معنا عبر الواتساب'}
         />
       </div>
