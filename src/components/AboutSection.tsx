@@ -19,20 +19,16 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
   const currentContent = content[language];
 
   return (
-    <section id="about" className="py-20 lg:py-32 bg-gradient-subtle">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center">
-          <div className="w-full max-w-4xl">
-            <img
-              src={language === 'en' 
-                ? '/lovable-uploads/70432765-ba56-435b-8a69-ef0ce6c38132.png'
-                : '/lovable-uploads/679c25ff-b407-4d59-a40f-77e25a0537f8.png'
-              }
-              alt={language === 'en' ? 'Who Are We - White Blank Marketing' : 'من نحن - وايت بلانك للتسويق'}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
+    <section id="about" className="relative w-full overflow-hidden">
+      <div className="w-full">
+        <img
+          src={language === 'en' 
+            ? '/lovable-uploads/70432765-ba56-435b-8a69-ef0ce6c38132.png'
+            : '/lovable-uploads/679c25ff-b407-4d59-a40f-77e25a0537f8.png'
+          }
+          alt={language === 'en' ? 'Who Are We - White Blank Marketing' : 'من نحن - وايت بلانك للتسويق'}
+          className="w-full h-auto"
+        />
       </div>
     </section>
   );
