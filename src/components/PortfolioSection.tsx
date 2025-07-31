@@ -10,7 +10,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ language }) => {
       <div className="w-full">
         <img
           src={language === 'en' 
-            ? '/lovable-uploads/7cf22ef5-7085-4598-8797-933dcbcf514f.png'
+            ? '/lovable-uploads/50498c80-8bf4-49cc-9bde-1ed0656ae000.png'
             : '/lovable-uploads/4609cba4-1e69-4ab6-9c39-f7370d3ce6ff.png'
           }
           alt={language === 'en' ? 'Portfolio - White Blank Marketing' : 'هويتنا - وايت بلانك للتسويق'}

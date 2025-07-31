@@ -35,9 +35,9 @@ const Index = () => {
       <main>
         <HeroSection language={language} onContactClick={() => {}} />
         <AboutSection language={language} />
+        <PortfolioSection language={language} />
         <WhyUsSection language={language} />
         <ServicesSection language={language} />
-        <PortfolioSection language={language} />
         
       </main>
       
