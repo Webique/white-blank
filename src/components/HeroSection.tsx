@@ -27,10 +27,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
           alt={language === 'en' ? 'From Spark to Spotlight' : 'من أول شرارة إلى آخر ضوء'}
           className="w-full h-auto"
         />
-        {/* Clickable area positioned over the "Ready" text */}
+        {/* Clickable area positioned over the "Ready/مستعد" text */}
         <button
           onClick={handleWhatsAppClick}
-          className="absolute bottom-[15%] right-[10%] w-[20%] h-[15%] bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-lg cursor-pointer"
+          className="absolute bottom-[20%] right-[8%] w-[25%] h-[20%] bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-xl cursor-pointer"
           aria-label={language === 'en' ? 'Contact us on WhatsApp' : 'تواصل معنا عبر الواتساب'}
         />
       </div>
