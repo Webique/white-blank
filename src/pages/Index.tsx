@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import WhyUsSection from '@/components/WhyUsSection';
-import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
-
+import OurServicesSection from '@/components/OurServicesSection';
+import WhyUsImageSection from '@/components/WhyUsImageSection';
+import OurClientsSection from '@/components/OurClientsSection';
+import ContactImageSection from '@/components/ContactImageSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -36,9 +37,10 @@ const Index = () => {
         <HeroSection language={language} onContactClick={() => {}} />
         <AboutSection language={language} />
         <PortfolioSection language={language} />
-        <WhyUsSection language={language} />
-        <ServicesSection language={language} />
-        
+        <OurServicesSection language={language} />
+        <WhyUsImageSection language={language} />
+        <OurClientsSection language={language} />
+        <ContactImageSection language={language} />
       </main>
       
       <Footer language={language} />

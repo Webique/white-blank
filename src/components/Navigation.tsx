@@ -21,13 +21,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    let element;
-    if (sectionId === 'contact') {
-      // Since contact section was removed, scroll to footer
-      element = document.querySelector('footer');
-    } else {
-      element = document.getElementById(sectionId);
-    }
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -37,16 +31,20 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
   const navItems = {
     en: [
       { id: 'hero', label: 'Home' },
-      { id: 'about', label: 'About' },
-      { id: 'services', label: 'Services' },
+      { id: 'about', label: 'Who We Are' },
       { id: 'portfolio', label: 'Portfolio' },
+      { id: 'services', label: 'Our Services' },
+      { id: 'why-us', label: 'Why Us' },
+      { id: 'clients', label: 'Our Clients' },
       { id: 'contact', label: 'Contact' },
     ],
     ar: [
       { id: 'hero', label: 'الرئيسية' },
       { id: 'about', label: 'من نحن' },
-      { id: 'services', label: 'خدماتنا' },
       { id: 'portfolio', label: 'أعمالنا' },
+      { id: 'services', label: 'خدماتنا' },
+      { id: 'why-us', label: 'لماذا نحن' },
+      { id: 'clients', label: 'عملاؤنا' },
       { id: 'contact', label: 'تواصل معنا' },
     ]
   };
