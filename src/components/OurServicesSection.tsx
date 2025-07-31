@@ -11,7 +11,7 @@ const OurServicesSection: React.FC<OurServicesSectionProps> = ({ language }) => 
         <img
           src={language === 'en' 
             ? '/lovable-uploads/0fbb4fc9-e752-4774-8c56-ee2b6a3989f0.png'
-            : '/lovable-uploads/0fbb4fc9-e752-4774-8c56-ee2b6a3989f0.png'
+            : '/lovable-uploads/847892d4-13be-48df-ab76-e0e7db96199a.png'
           }
           alt={language === 'en' ? 'Our Services - White Blank Marketing' : 'خدماتنا - وايت بلانك للتسويق'}
           className="w-full h-auto"

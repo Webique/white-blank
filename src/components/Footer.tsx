@@ -14,9 +14,11 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
       copyright: "© 2024 White Blank Marketing. All rights reserved.",
       links: [
         { name: "Home", href: "#hero" },
-        { name: "About", href: "#about" },
-        { name: "Services", href: "#services" },
+        { name: "Who We Are", href: "#about" },
         { name: "Portfolio", href: "#portfolio" },
+        { name: "Our Services", href: "#services" },
+        { name: "Why Us", href: "#why-us" },
+        { name: "Our Clients", href: "#clients" },
         { name: "Contact", href: "#contact" }
       ]
     },
@@ -28,8 +30,10 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
       links: [
         { name: "الرئيسية", href: "#hero" },
         { name: "من نحن", href: "#about" },
-        { name: "خدماتنا", href: "#services" },
         { name: "أعمالنا", href: "#portfolio" },
+        { name: "خدماتنا", href: "#services" },
+        { name: "لماذا نحن", href: "#why-us" },
+        { name: "عملاؤنا", href: "#clients" },
         { name: "تواصل معنا", href: "#contact" }
       ]
     }
