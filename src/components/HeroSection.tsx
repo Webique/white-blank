@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+966123456789"; // Replace with actual phone number
+    const phoneNumber = "+966533696905";
     const message = language === 'en' 
       ? "Hello! I'm ready to get started with White Blank Marketing." 
       : "مرحباً! أنا مستعد للبدء مع وايت بلانك للتسويق.";
@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
   return (
     <section id="hero" className="relative w-full overflow-hidden pt-16 lg:pt-20">
       {/* Hero Image */}
-      <div className="w-full relative cursor-pointer" onClick={handleWhatsAppClick}>
+      <div className="w-full relative">
         <img
           src={language === 'en' 
             ? '/lovable-uploads/45c4ac48-561b-465b-a955-8ac9b6238e88.png'
@@ -27,8 +27,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
           alt={language === 'en' ? 'From Spark to Spotlight' : 'من أول شرارة إلى آخر ضوء'}
           className="w-full h-auto"
         />
-        {/* Invisible overlay for better click detection */}
-        <div className="absolute inset-0 hover:bg-black/5 transition-colors duration-300" />
+        {/* Clickable area positioned over the "Ready" text */}
+        <button
+          onClick={handleWhatsAppClick}
+          className="absolute bottom-[15%] right-[10%] w-[20%] h-[15%] bg-transparent hover:bg-white/10 transition-colors duration-300 rounded-lg cursor-pointer"
+          aria-label={language === 'en' ? 'Contact us on WhatsApp' : 'تواصل معنا عبر الواتساب'}
+        />
       </div>
     </section>
   );
