@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) => {
   return (
-    <section id="hero" className="relative w-full overflow-hidden">
+    <section id="hero" className="relative w-full overflow-hidden pt-16 lg:pt-20">
       {/* Hero Image */}
       <div className="w-full">
         <img

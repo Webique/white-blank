@@ -79,27 +79,9 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
+          {/* Logo removed */}
           <div className="flex-shrink-0">
-            <img 
-              src="/lovable-uploads/white-blank-logo.png" 
-              alt="White Blank Marketing" 
-              className="
-                h-20 
-                md:h-28 
-                lg:h-36 
-                xl:h-40 
-                2xl:h-48 
-                w-auto
-                transition-all
-                duration-300
-                max-h-[12vh]
-              "
-              style={{
-                maxWidth: '100%',
-                objectFit: 'contain'
-              }}
-            />
+            {/* Logo removed as requested */}
           </div>
 
           {/* Desktop Navigation */}
