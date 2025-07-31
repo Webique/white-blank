@@ -79,9 +79,25 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo removed */}
+          {/* Logo */}
           <div className="flex-shrink-0">
-            {/* Logo removed as requested */}
+            <img 
+              src="/lovable-uploads/white-blank-logo.png" 
+              alt="White Blank Marketing" 
+              className="
+                h-12 
+                md:h-16 
+                lg:h-20 
+                xl:h-24 
+                w-auto
+                transition-all
+                duration-300
+              "
+              style={{
+                maxWidth: '100%',
+                objectFit: 'contain'
+              }}
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -96,7 +112,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-body text-foreground hover:text-accent transition-colors duration-300 relative group"
+                className="font-body text-sm font-bold text-foreground hover:text-accent transition-colors duration-300 relative group"
                 style={getNavButtonStyle(idx, navItems[language].length, isRTL)}
               >
                 {item.label}
@@ -150,7 +166,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-3 py-2 font-body text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-colors duration-300"
+                  className="block w-full text-left px-3 py-2 font-body text-sm font-bold text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-colors duration-300"
                   style={getMobileNavButtonStyle(idx, navItems[language].length, isRTL)}
                 >
                   {item.label}
