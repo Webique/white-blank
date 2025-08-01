@@ -38,7 +38,7 @@ const Index = () => {
         <AboutSection language={language} />
         <PortfolioSection language={language} />
         <OurServicesSection language={language} />
-        <WhyUsImageSection language={language} />
+        {/* <WhyUsImageSection language={language} /> */}
         <OurClientsSection language={language} />
         <ContactImageSection language={language} />
       </main>
