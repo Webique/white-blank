@@ -34,9 +34,9 @@ const WhyUsSection: React.FC<WhyUsSectionProps> = ({ language }) => {
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative">
+        <div className="relative min-h-[600px]">
           {/* Large slideshow positioned on right for English, left for Arabic */}
-          <div className={`absolute top-0 ${language === 'ar' ? 'left-0' : 'right-0'} w-96 h-[500px] z-10 block`}>
+          <div className={`absolute top-1/2 transform -translate-y-1/2 ${language === 'ar' ? 'left-8' : 'right-8'} w-80 h-96 z-20 block`}>
             <Carousel className="w-full h-full" opts={{ loop: true }}>
               <CarouselContent>
                 {slideImages.map((image, index) => (
