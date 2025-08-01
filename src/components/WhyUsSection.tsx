@@ -35,24 +35,24 @@ const WhyUsSection: React.FC<WhyUsSectionProps> = ({ language }) => {
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
-          {/* Slideshow positioned on right for English, left for Arabic */}
-          <div className={`absolute top-0 ${language === 'ar' ? 'left-0' : 'right-0'} w-80 h-96 hidden lg:block`}>
-            <Carousel className="w-full h-full">
+          {/* Large slideshow positioned on right for English, left for Arabic */}
+          <div className={`absolute top-0 ${language === 'ar' ? 'left-0' : 'right-0'} w-96 h-[500px] z-10 block`}>
+            <Carousel className="w-full h-full" opts={{ loop: true }}>
               <CarouselContent>
                 {slideImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div className="w-full h-96">
+                    <div className="w-full h-[500px] bg-card rounded-xl shadow-2xl overflow-hidden">
                       <img
                         src={image}
                         alt={`Slideshow image ${index + 1}`}
-                        className="w-full h-full object-cover rounded-lg shadow-lg"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
             </Carousel>
           </div>
 
