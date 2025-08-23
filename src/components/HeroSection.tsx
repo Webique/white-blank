@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
           src={language === 'en' 
             ? '/lovable-uploads/45c4ac48-561b-465b-a955-8ac9b6238e88.png'
             : window.innerWidth < 768 
-              ? '/lovable-uploads/arabic-mobile-hero-about.png'
+              ? '/lovable-uploads/f6fba9bc-bc6f-4e54-a71d-ab45f415025e.png'
               : '/lovable-uploads/6ad52912-39e0-4c53-be4a-372ccfcf8743.png'
           }
           alt={language === 'en' ? 'From Spark to Spotlight' : 'من أول شرارة إلى آخر ضوء'}
