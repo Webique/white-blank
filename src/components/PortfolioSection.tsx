@@ -11,7 +11,9 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ language }) => {
         <img
           src={language === 'en' 
             ? '/lovable-uploads/50498c80-8bf4-49cc-9bde-1ed0656ae000.png'
-            : '/lovable-uploads/4609cba4-1e69-4ab6-9c39-f7370d3ce6ff.png'
+            : window.innerWidth < 768 
+              ? '/lovable-uploads/f6fba9bc-bc6f-4e54-a71d-ab45f415025e.png'
+              : '/lovable-uploads/4609cba4-1e69-4ab6-9c39-f7370d3ce6ff.png'
           }
           alt={language === 'en' ? 'Portfolio - White Blank Marketing' : 'هويتنا - وايت بلانك للتسويق'}
           className="w-full h-auto"
