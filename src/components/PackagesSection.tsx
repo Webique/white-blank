@@ -7,8 +7,6 @@ interface PackagesSectionProps {
 const PackagesSection: React.FC<PackagesSectionProps> = ({ language }) => {
   const content = {
     en: {
-      title: "Our Packages",
-      subtitle: "Choose the perfect package for your business growth",
       packages: [
         {
           image: "/lovable-uploads/58c1b187-7299-49ac-9575-a30bb0732f2e.png",
@@ -25,8 +23,6 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ language }) => {
       ]
     },
     ar: {
-      title: "باقاتنا",
-      subtitle: "اختر الباقة المثالية لنمو عملك",
       packages: [
         {
           image: "/lovable-uploads/58c1b187-7299-49ac-9575-a30bb0732f2e.png",
@@ -45,7 +41,6 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ language }) => {
   };
 
   const currentContent = content[language];
-  const isRTL = language === 'ar';
 
   return (
     <section 
@@ -53,15 +48,6 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ language }) => {
       className="py-20 bg-gradient-to-br from-background to-muted/50"
     >
       <div className="container mx-auto px-4">
-        <div className={`text-center mb-16 ${isRTL ? 'text-right' : 'text-left'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            {currentContent.title}
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {currentContent.subtitle}
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6">
           {currentContent.packages.map((pkg, index) => (
             <div 

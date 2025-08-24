@@ -33,6 +33,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
       { path: '/about', label: 'Who We Are' },
       { path: '/portfolio', label: 'Portfolio' },
       { path: '/services', label: 'Our Services' },
+      { path: '/packages', label: 'Packages' },
       { path: '/clients', label: 'Our Clients' },
       { path: '/contact', label: 'Contact' },
     ],
@@ -41,6 +42,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
       { path: '/about', label: 'من نحن' },
       { path: '/portfolio', label: 'أعمالنا' },
       { path: '/services', label: 'خدماتنا' },
+      { path: '/packages', label: 'الباقات' },
       { path: '/clients', label: 'عملاؤنا' },
       { path: '/contact', label: 'تواصل معنا' },
     ]
