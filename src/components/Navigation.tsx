@@ -71,7 +71,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
   
 
   return (
-    <nav className={`w-full transition-all duration-300 ${
+    <nav className={`sticky top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-background'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
