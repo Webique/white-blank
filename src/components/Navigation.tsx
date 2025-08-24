@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
 
@@ -20,32 +21,28 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const location = useLocation();
+
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
   const navItems = {
     en: [
-      { id: 'hero', label: 'Home' },
-      { id: 'about', label: 'Who We Are' },
-      { id: 'portfolio', label: 'Portfolio' },
-      { id: 'services', label: 'Our Services' },
-      { id: 'why-us', label: 'Why Us' },
-      { id: 'clients', label: 'Our Clients' },
-      { id: 'contact', label: 'Contact' },
+      { path: '/', label: 'Home' },
+      { path: '/about', label: 'Who We Are' },
+      { path: '/portfolio', label: 'Portfolio' },
+      { path: '/services', label: 'Our Services' },
+      { path: '/clients', label: 'Our Clients' },
+      { path: '/contact', label: 'Contact' },
     ],
     ar: [
-      { id: 'hero', label: 'الرئيسية' },
-      { id: 'about', label: 'من نحن' },
-      { id: 'portfolio', label: 'أعمالنا' },
-      { id: 'services', label: 'خدماتنا' },
-      { id: 'why-us', label: 'لماذا نحن' },
-      { id: 'clients', label: 'عملاؤنا' },
-      { id: 'contact', label: 'تواصل معنا' },
+      { path: '/', label: 'الرئيسية' },
+      { path: '/about', label: 'من نحن' },
+      { path: '/portfolio', label: 'أعمالنا' },
+      { path: '/services', label: 'خدماتنا' },
+      { path: '/clients', label: 'عملاؤنا' },
+      { path: '/contact', label: 'تواصل معنا' },
     ]
   };
 
@@ -80,7 +77,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <img 
               src="/lovable-uploads/white-blank-logo.png" 
               alt="White Blank Marketing" 
@@ -98,7 +95,7 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
                 objectFit: 'contain'
               }}
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div
@@ -109,15 +106,19 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
 >
 
             {navItems[language].map((item, idx) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="font-body text-sm font-bold text-foreground hover:text-accent transition-colors duration-300 relative group"
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`font-body text-sm font-bold transition-colors duration-300 relative group ${
+                  location.pathname === item.path ? 'text-accent' : 'text-foreground hover:text-accent'
+                }`}
                 style={getNavButtonStyle(idx, navItems[language].length, isRTL)}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </button>
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+              </Link>
             ))}
           </div>
 
@@ -163,14 +164,19 @@ const Navigation: React.FC<NavigationProps> = ({ language, onLanguageChange }) =
               dir={isRTL ? 'rtl' : 'ltr'}
             >
               {navItems[language].map((item, idx) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-3 py-2 font-body text-sm font-bold text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-colors duration-300"
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={closeMobileMenu}
+                  className={`block w-full text-left px-3 py-2 font-body text-sm font-bold rounded-lg transition-colors duration-300 ${
+                    location.pathname === item.path 
+                      ? 'text-accent bg-accent/10' 
+                      : 'text-foreground hover:text-accent hover:bg-accent/10'
+                  }`}
                   style={getMobileNavButtonStyle(idx, navItems[language].length, isRTL)}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
