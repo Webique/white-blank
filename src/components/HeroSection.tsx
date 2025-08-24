@@ -31,13 +31,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
           alt={language === 'en' ? 'From Spark to Spotlight' : 'من أول شرارة إلى آخر ضوء'}
           className="w-full h-auto"
         />
-        {/* Clickable area positioned over the "Ready/مستعد" text */}
+        {/* Clickable area - full side on mobile, positioned button on desktop */}
         <button
           onClick={handleWhatsAppClick}
-          className={`absolute transition-colors duration-300 rounded-xl cursor-pointer hover:bg-white/10 ${
-            language === 'en' 
-              ? 'bottom-[20%] right-[8%] w-[25%] h-[20%]'  // English positioning
-              : 'bottom-[20%] left-[8%] w-[25%] h-[20%]'   // Arabic positioning (left side)
+          className={`absolute transition-colors duration-300 cursor-pointer hover:bg-white/10 ${
+            window.innerWidth < 768
+              ? language === 'en' 
+                ? 'top-0 right-0 w-1/2 h-full'  // English: entire right side on mobile
+                : 'top-0 left-0 w-1/2 h-full'   // Arabic: entire left side on mobile
+              : language === 'en' 
+                ? 'bottom-[20%] right-[8%] w-[25%] h-[20%] rounded-xl'  // English positioning on desktop
+                : 'bottom-[20%] left-[8%] w-[25%] h-[20%] rounded-xl'   // Arabic positioning on desktop
           }`}
           aria-label={language === 'en' ? 'Contact us on WhatsApp' : 'تواصل معنا عبر الواتساب'}
         />
