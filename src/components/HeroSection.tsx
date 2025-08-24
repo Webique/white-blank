@@ -21,7 +21,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
       <div className="w-full relative">
         <img
           src={language === 'en' 
-            ? '/lovable-uploads/45c4ac48-561b-465b-a955-8ac9b6238e88.png'
+            ? window.innerWidth < 768 
+              ? '/lovable-uploads/68eb0488-137d-4f93-ab0d-22f312e6b3a5.png'
+              : '/lovable-uploads/45c4ac48-561b-465b-a955-8ac9b6238e88.png'
             : window.innerWidth < 768 
               ? '/lovable-uploads/d016e041-3890-4298-9499-c395998dd4bc.png'
               : '/lovable-uploads/6ad52912-39e0-4c53-be4a-372ccfcf8743.png'

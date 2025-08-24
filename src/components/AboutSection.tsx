@@ -23,7 +23,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
       <div className="w-full">
         <img
           src={language === 'en' 
-            ? '/lovable-uploads/70432765-ba56-435b-8a69-ef0ce6c38132.png'
+            ? window.innerWidth < 768 
+              ? '/lovable-uploads/afe561a5-cd67-41d8-abba-c8f989f0a962.png'
+              : '/lovable-uploads/70432765-ba56-435b-8a69-ef0ce6c38132.png'
             : window.innerWidth < 768 
               ? '/lovable-uploads/df682a1b-0bc3-4ccb-8a40-b946f6efef16.png'
               : '/lovable-uploads/679c25ff-b407-4d59-a40f-77e25a0537f8.png'
