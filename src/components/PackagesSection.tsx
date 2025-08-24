@@ -25,15 +25,15 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ language }) => {
     ar: {
       packages: [
         {
-          image: "/lovable-uploads/58c1b187-7299-49ac-9575-a30bb0732f2e.png",
-          alt: "باقة البداية - 3,200 جنيه"
+          image: "/lovable-uploads/fbc6cbde-5e31-4840-a783-bf7afbbb22b4.png",
+          alt: "باقة الانطلاقة - 3,200 جنيه"
         },
         {
-          image: "/lovable-uploads/7d1bfda0-d7cd-4f0e-b48e-b875b1a6f13b.png",
+          image: "/lovable-uploads/734df3d9-d490-4def-bc2d-9cd5d3e4f7c1.png",
           alt: "باقة النمو - 7,200 جنيه"
         },
         {
-          image: "/lovable-uploads/9218205e-1b8f-4219-bc13-a7dea828a01a.png",
+          image: "/lovable-uploads/6627b0b8-4a3e-4896-9484-fbaabfce1b91.png",
           alt: "باقة التأثير - 15,500 جنيه"
         }
       ]
