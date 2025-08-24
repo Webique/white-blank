@@ -36,9 +36,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
           onClick={handleWhatsAppClick}
           className={`absolute transition-colors duration-300 cursor-pointer hover:bg-white/10 ${
             window.innerWidth < 768
-              ? language === 'en' 
-                ? 'top-0 right-0 w-1/2 h-full'  // English: entire right side on mobile
-                : 'top-0 left-0 w-1/2 h-full'   // Arabic: entire left side on mobile
+              ? 'top-0 left-0 w-1/2 h-full'  // Both languages: entire left side on mobile
               : language === 'en' 
                 ? 'bottom-[20%] right-[8%] w-[25%] h-[20%] rounded-xl'  // English positioning on desktop
                 : 'bottom-[20%] left-[8%] w-[25%] h-[20%] rounded-xl'   // Arabic positioning on desktop
