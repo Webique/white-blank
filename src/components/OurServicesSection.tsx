@@ -8,7 +8,25 @@ const OurServicesSection: React.FC<OurServicesSectionProps> = ({ language }) => 
   return (
     <section id="services" className="relative w-full overflow-hidden">
       <div className="w-full">
-        {language === 'en' ? (
+        {language === 'en' ? window.innerWidth < 768 ? (
+          <div className="w-full">
+            <img
+              src="/lovable-uploads/2263e733-5b8d-43b3-9952-13ca3e0dca4d.png"
+              alt="Our Services - White Blank Marketing"
+              className="w-full h-auto"
+            />
+            <img
+              src="/lovable-uploads/804c7e3d-7b69-44a3-861f-63825215adee.png"
+              alt="Our Services - White Blank Marketing"
+              className="w-full h-auto"
+            />
+            <img
+              src="/lovable-uploads/ef1c682e-f79a-4c00-93f6-5d4a92dbd4e6.png"
+              alt="Our Services - White Blank Marketing"
+              className="w-full h-auto"
+            />
+          </div>
+        ) : (
           <img
             src="/lovable-uploads/0fbb4fc9-e752-4774-8c56-ee2b6a3989f0.png"
             alt="Our Services - White Blank Marketing"
