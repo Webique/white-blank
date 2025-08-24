@@ -11,17 +11,17 @@ const OurServicesSection: React.FC<OurServicesSectionProps> = ({ language }) => 
         {language === 'en' ? window.innerWidth < 768 ? (
           <div className="w-full">
             <img
-              src="/lovable-uploads/2263e733-5b8d-43b3-9952-13ca3e0dca4d.png"
+              src="/lovable-uploads/1ef4408c-5012-4f44-b566-d89a20b13abc.png"
               alt="Our Services - White Blank Marketing"
               className="w-full h-auto"
             />
             <img
-              src="/lovable-uploads/804c7e3d-7b69-44a3-861f-63825215adee.png"
+              src="/lovable-uploads/e54aafca-6fa7-421f-9093-cf85ce157a7f.png"
               alt="Our Services - White Blank Marketing"
               className="w-full h-auto"
             />
             <img
-              src="/lovable-uploads/ef1c682e-f79a-4c00-93f6-5d4a92dbd4e6.png"
+              src="/lovable-uploads/2922faf3-c9d1-4ba5-a5aa-bce2b5ab854a.png"
               alt="Our Services - White Blank Marketing"
               className="w-full h-auto"
             />
