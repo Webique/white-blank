@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
               : '/lovable-uploads/45c4ac48-561b-465b-a955-8ac9b6238e88.png'
             : window.innerWidth < 768 
               ? '/lovable-uploads/d016e041-3890-4298-9499-c395998dd4bc.png'
-              : '/lovable-uploads/6ad52912-39e0-4c53-be4a-372ccfcf8743.png'
+              : '/lovable-uploads/4b17590d-1450-4832-8527-f0d4e43171c6.png'
           }
           alt={language === 'en' ? 'From Spark to Spotlight' : 'من أول شرارة إلى آخر ضوء'}
           className="w-full h-auto"
@@ -38,8 +38,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language, onContactClick }) =
             window.innerWidth < 768
               ? 'top-0 left-0 w-1/2 h-full'  // Both languages: entire left side on mobile
               : language === 'en' 
-                ? 'bottom-[20%] right-[8%] w-[25%] h-[20%] rounded-xl'  // English positioning on desktop
-                : 'bottom-[20%] left-[8%] w-[25%] h-[20%] rounded-xl'   // Arabic positioning on desktop
+                ? 'bottom-[20%] right-[8%] w-[25%] h-[20%] rounded-3xl'  // English positioning on desktop
+                : 'bottom-[20%] left-[8%] w-[25%] h-[20%] rounded-3xl'   // Arabic positioning on desktop
           }`}
           aria-label={language === 'en' ? 'Contact us on WhatsApp' : 'تواصل معنا عبر الواتساب'}
         />
