@@ -11,7 +11,7 @@ const OurClientsSection: React.FC<OurClientsSectionProps> = ({ language }) => {
         <img
           src={language === 'en' 
             ? window.innerWidth < 768 
-              ? '/lovable-uploads/e3257805-5bc2-4759-8d40-e8c23dec7319.png'
+              ? '/lovable-uploads/65b0303f-62df-4d23-8825-49acc9c04a11.png'
               : '/lovable-uploads/e11cbd87-b7cb-4245-a89f-88c6d8ba2510.png'
             : window.innerWidth < 768 
               ? '/lovable-uploads/a23770c4-fe2a-40e6-bdeb-392b3cbbc04d.png'
