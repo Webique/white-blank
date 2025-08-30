@@ -15,7 +15,7 @@ const OurClientsSection: React.FC<OurClientsSectionProps> = ({ language }) => {
               : '/lovable-uploads/e11cbd87-b7cb-4245-a89f-88c6d8ba2510.png'
             : window.innerWidth < 768 
               ? '/lovable-uploads/a23770c4-fe2a-40e6-bdeb-392b3cbbc04d.png'
-              : '/lovable-uploads/f0015b76-7769-4172-a966-a308838f1181.png'
+              : '/lovable-uploads/c5e6f543-9a47-4bfd-811d-fd1d7769b615.png'
           }
           alt={language === 'en' ? 'Our Clients - White Blank Marketing' : 'عملاؤنا - وايت بلانك للتسويق'}
           className="w-full h-auto"
