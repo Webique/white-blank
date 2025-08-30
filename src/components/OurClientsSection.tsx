@@ -12,7 +12,7 @@ const OurClientsSection: React.FC<OurClientsSectionProps> = ({ language }) => {
           src={language === 'en' 
             ? window.innerWidth < 768 
               ? '/lovable-uploads/e3257805-5bc2-4759-8d40-e8c23dec7319.png'
-              : '/lovable-uploads/f3250bc2-40f4-4b55-a621-7d3fcaf13c35.png'
+              : '/lovable-uploads/e11cbd87-b7cb-4245-a89f-88c6d8ba2510.png'
             : window.innerWidth < 768 
               ? '/lovable-uploads/a23770c4-fe2a-40e6-bdeb-392b3cbbc04d.png'
               : '/lovable-uploads/f0015b76-7769-4172-a966-a308838f1181.png'
