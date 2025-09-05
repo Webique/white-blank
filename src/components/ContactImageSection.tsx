@@ -11,7 +11,7 @@ const ContactImageSection: React.FC<ContactImageSectionProps> = ({ language }) =
         <img
           src={language === 'en' 
             ? window.innerWidth < 768 
-              ? '/lovable-uploads/a1691f55-d838-44fb-a467-27b8990a44ea.png'
+              ? '/lovable-uploads/0bfa78d9-f799-4b58-b919-e24cbc930ec0.png'
               : '/lovable-uploads/6aff575c-dda8-4a42-9c03-8dc2bd117d31.png'
             : window.innerWidth < 768 
               ? '/lovable-uploads/60fc95cf-0232-4989-bd32-a81883ea83d4.png'
