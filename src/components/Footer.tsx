@@ -49,6 +49,19 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
     }
   };
 
+  // Contact action handlers
+  const handlePhoneClick = () => {
+    window.open('https://wa.me/966533696905', '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.open('mailto:whiteblankmkt@gmail.com', '_blank');
+  };
+
+  const handleLocationClick = () => {
+    window.open('https://www.google.com/maps/search/أبها+شارع+الحزام', '_blank');
+  };
+
   return (
     <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,20 +110,29 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
               {currentContent.contact}
             </h4>
             <div className="space-y-3">
-            <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
-                <Phone className="w-4 h-4 text-accent" />
-                <span className="font-body text-primary-foreground/80 text-sm">0533696905</span>
-              </div>
-              <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
-                <Mail className="w-4 h-4 text-accent" />
-                <span className="font-body text-primary-foreground/80 text-sm">whiteblankmkt@gmail.com</span>
-              </div>
-              <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
-                <MapPin className="w-4 h-4 text-accent" />
-                <span className="font-body text-primary-foreground/80 text-sm">
+              <button 
+                onClick={handlePhoneClick}
+                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-2 transition-all duration-300 group`}
+              >
+                <Phone className="w-4 h-4 text-accent group-hover:scale-110 transition-transform duration-300" />
+                <span className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">0533696905</span>
+              </button>
+              <button 
+                onClick={handleEmailClick}
+                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-2 transition-all duration-300 group`}
+              >
+                <Mail className="w-4 h-4 text-accent group-hover:scale-110 transition-transform duration-300" />
+                <span className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">whiteblankmkt@gmail.com</span>
+              </button>
+              <button 
+                onClick={handleLocationClick}
+                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-2 transition-all duration-300 group`}
+              >
+                <MapPin className="w-4 h-4 text-accent group-hover:scale-110 transition-transform duration-300" />
+                <span className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">
                   {language === 'en' ? "ABHA – ALHEZAM STREET" : "أبها – شارع الحزام"}
                 </span>
-              </div>
+              </button>
             </div>
           </div>
 
