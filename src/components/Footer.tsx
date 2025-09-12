@@ -49,19 +49,6 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
     }
   };
 
-  // Contact action handlers
-  const handlePhoneClick = () => {
-    window.open('https://wa.me/966533696905', '_blank');
-  };
-
-  const handleEmailClick = () => {
-    window.open('mailto:whiteblankmkt@gmail.com', '_blank');
-  };
-
-  const handleLocationClick = () => {
-    window.open('https://www.google.com/maps/search/أبها+شارع+الحزام', '_blank');
-  };
-
   return (
     <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,29 +97,35 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
               {currentContent.contact}
             </h4>
             <div className="space-y-3">
-              <button 
-                onClick={handlePhoneClick}
-                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-2 transition-all duration-300 group`}
+              <a 
+                href="https://wa.me/966533696905"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-3 transition-all duration-300 group cursor-pointer`}
               >
                 <Phone className="w-4 h-4 text-accent group-hover:scale-110 transition-transform duration-300" />
                 <span className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">0533696905</span>
-              </button>
-              <button 
-                onClick={handleEmailClick}
-                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-2 transition-all duration-300 group`}
+              </a>
+              <a 
+                href="mailto:whiteblankmkt@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-3 transition-all duration-300 group cursor-pointer`}
               >
                 <Mail className="w-4 h-4 text-accent group-hover:scale-110 transition-transform duration-300" />
                 <span className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">whiteblankmkt@gmail.com</span>
-              </button>
-              <button 
-                onClick={handleLocationClick}
-                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-2 transition-all duration-300 group`}
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/أبها+شارع+الحزام"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-3 transition-all duration-300 group cursor-pointer`}
               >
                 <MapPin className="w-4 h-4 text-accent group-hover:scale-110 transition-transform duration-300" />
                 <span className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">
                   {language === 'en' ? "ABHA – ALHEZAM STREET" : "أبها – شارع الحزام"}
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 
@@ -162,8 +155,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
                 href="https://t.snapchat.com/7n6N75ab" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300"
-              >
+                className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">
                 <FaSnapchatGhost className="w-5 h-5" />
               </a>
             </div>
