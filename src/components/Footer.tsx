@@ -116,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
                 <span className="font-body text-primary-foreground/80 text-sm group-hover:text-accent transition-colors duration-300">whiteblankmkt@gmail.com</span>
               </a>
               <a 
-                href="https://www.google.com/maps/search/أبها+شارع+الحزام"
+                href="https://maps.app.goo.gl/ZkDsUvCkZRDQDjdu6?g_st=ipc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'} w-full hover:bg-accent/10 rounded-lg p-3 transition-all duration-300 group cursor-pointer`}
